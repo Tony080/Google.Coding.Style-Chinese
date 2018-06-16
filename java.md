@@ -5,11 +5,11 @@
 	1.2 [指南声明](#12-指南声明)<br>
 2. [源码文件基础守则](#2-源码文件基础守则)<br>
 	2.1 [文件名](#21-文件名)<br>
-	2.2 [文件编码：UTF-8](#22-文件编码：UTF-8)<br>
+	2.2 [文件编码：UTF-8](22-文件编码utf-8)<br>
 	2.3 [特殊字符](#23-特殊字符)<br>
-		2.3.1 [白空格字符](#231-白空格字符(Whitespace characters))<br>
+		2.3.1 [白空格字符](#231-白空格字符whitespace-characters)<br>
 		2.3.2 [特殊转义序列](#232-特殊转义序列)<br>
-		2.3.3 [非ASCII字符](#233-非ASCII字符)<br>
+		2.3.3 [非ASCII字符](#233-非ascii字符)<br>
 	
 	//TODO
 
@@ -42,6 +42,38 @@
 若任意字符中包含[特殊转义序列](http://docs.oracle.com/javase/tutorial/java/data/characters.html)(``\b``，``\t``，``\n``，``\f``，``\r``，``\"``，``\'``和``\\``)，则应直接使用该序列而非使用其八进制形式(如``\012``)或其Unicode转义(如``\u000a``)。
 #### 2.3.3 非ASCII字符
 对于余下的非ASCII字符，可使用实际Unicode字符(如``∞``)或等效Unicode转义(如``\u221e``)表示。尽管(本文档)强烈不推荐在字符串和注释外出现Unicode转义，(实际中)如何取舍仅取决于哪个更容易阅读和容易理解。<br>
-<p class="tip">Tip：</p>
+*Tip：在使用Unicode转义，或直接使用Unicode字符时，添加解释性的注释会很有帮助。*
+示例：<br>
+<table>
+  <tbody><tr>
+    <th>示例</th>
+    <th>评论</th>
+  </tr>
+
+  <tr>
+    <td><code class="prettyprint lang-java prettyprinted" style=""><span class="typ">String</span><span class="pln"> unitAbbrev </span><span class="pun">=</span><span class="pln"> </span><span class="str">"μs"</span><span class="pun">;</span></code></td>
+    <td>最佳：无需注释也很清晰明了。</td>
+  </tr>
+
+  <tr>
+    <td><code class="prettyprint lang-java prettyprinted" style=""><span class="typ">String</span><span class="pln"> unitAbbrev </span><span class="pun">=</span><span class="pln"> </span><span class="str">"\u03bcs"</span><span class="pun">;</span><span class="pln"> </span><span class="com">// "μs"</span></code></td>
+    <td>可行，但是没有理由这样做。</td>
+  </tr>
+
+  <tr>
+    <td><code class="prettyprint lang-java prettyprinted" style=""><span class="typ">String</span><span class="pln"> unitAbbrev </span><span class="pun">=</span><span class="pln"> </span><span class="str">"\u03bcs"</span><span class="pun">;</span><span class="pln"> </span><span class="com">// Greek letter mu, "s"</span></code></td>
+    <td>可行，但是很别扭，而且容易出错。</td>
+  </tr>
+
+  <tr>
+    <td><code class="badcode">String unitAbbrev = "\u03bcs";</code></td>
+    <td>较差：读代码的人不知道这是什么。</td>
+  </tr>
+
+  <tr>
+     <td><code class="prettyprint lang-java prettyprinted" style=""><span class="kwd">return</span><span class="pln"> </span><span class="str">'\ufeff'</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> content</span><span class="pun">;</span><span class="pln"> </span><span class="com">// byte order mark</span></code></td>
+     <td>好：对不可打印的字符使用转义，并进行必要的注释。</td>
+  </tr>
+</tbody></table>
 ### 译注
 <p id="comment1">[1]实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
