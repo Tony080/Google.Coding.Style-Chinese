@@ -76,6 +76,12 @@
   </tr>
 </tbody></table>
 
-*Tip：永远不要因为害怕程序不能正确处理非ASCII字符而降低源码可读性。如果程序未能正确处理非ASCII字符，那么该程序是**损坏的**并应立即着手**修复***<br>
+*Tip：永远不要因为害怕程序不能正确处理非ASCII字符而降低源码可读性。如果程序未能正确处理非ASCII字符，那么该程序是**损坏的**并应着手**修复***。<br>
+## 3. 源文件结构
+一个源文件应**按照顺序**，包含以下内容：<br>
+	1. 如果包含许可或版权信息，应显示
+	2. 所处的包的声明(Package statement)
+	3. 导入声明(import statements)
+	4. 
 ### 译注
 <p id="comment1">[1]实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
