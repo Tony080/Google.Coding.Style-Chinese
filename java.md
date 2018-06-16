@@ -5,6 +5,12 @@
 	1.2 [指南声明](#12-指南声明)<br>
 2. [源码文件基础守则](#2-源码文件基础守则)<br>
 	2.1 [文件名](#21-文件名)<br>
+	2.2 [文件编码：UTF-8](#22-文件编码：UTF-8)<br>
+	2.3 [特殊字符](#23-特殊字符)<br>
+		2.3.1 [白空格字符](#231-白空格字符(Whitespace characters))<br>
+		2.3.2 [特殊转义序列](#232-特殊转义序列)<br>
+		2.3.3 [非ASCII字符](#233-非ASCII字符)<br>
+	
 	//TODO
 
 ## 1. 简介
@@ -34,6 +40,8 @@
 	2. 制表符(Tab)**不能**用于缩进。
 #### 2.3.2 特殊转义序列
 若任意字符中包含[特殊转义序列](http://docs.oracle.com/javase/tutorial/java/data/characters.html)(``\b``，``\t``，``\n``，``\f``，``\r``，``\"``，``\'``和``\\``)，则应直接使用该序列而非使用其八进制形式(如``\012``)或其Unicode转义(如``\u000a``)。
-
+#### 2.3.3 非ASCII字符
+对于余下的非ASCII字符，可使用实际Unicode字符(如``∞``)或等效Unicode转义(如``\u221e``)表示。尽管(本文档)强烈不推荐在字符串和注释外出现Unicode转义，(实际中)如何取舍仅取决于哪个更容易阅读和容易理解。<br>
+<p class="tip">Tip：</p>
 ### 译注
 <p id="comment1">[1]实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
