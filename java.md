@@ -42,7 +42,7 @@
 若任意字符中包含[特殊转义序列](http://docs.oracle.com/javase/tutorial/java/data/characters.html)(``\b``，``\t``，``\n``，``\f``，``\r``，``\"``，``\'``和``\\``)，则应直接使用该序列而非使用其八进制形式(如``\012``)或其Unicode转义(如``\u000a``)。
 #### 2.3.3 非ASCII字符
 对于余下的非ASCII字符，可使用实际Unicode字符(如``∞``)或等效Unicode转义(如``\u221e``)表示。尽管(本文档)强烈不推荐在字符串和注释外出现Unicode转义，(实际中)如何取舍仅取决于哪个更容易阅读和容易理解。<br>
-*Tip：在使用Unicode转义，或直接使用Unicode字符时，添加解释性的注释会很有帮助。*
+*Tip：在使用Unicode转义，或直接使用Unicode字符时，添加解释性的注释会很有帮助。*<br>
 示例：<br>
 <table>
   <tbody><tr>
@@ -75,5 +75,7 @@
      <td>好：对不可打印的字符使用转义，并进行必要的注释。</td>
   </tr>
 </tbody></table>
+
+*Tip：永远不要因为害怕程序不能正确处理非ASCII字符而降低源码可读性。如果程序未能正确处理非ASCII字符，那么该程序是**损坏的**并应立即着手**修复***<br>
 ### 译注
 <p id="comment1">[1]实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
