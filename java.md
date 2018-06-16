@@ -26,4 +26,4 @@
 ### 2.1 文件名
 源码文件名由区分大小写的顶层类名(有且仅有1个)，和``.java``后缀构成。
 ### 译注
-<p id="comment1">[1]实现用注释是指：如``/* A comment */``或 ``// Another comment``。而文档用注释/Javadoc则是指``/ ** This is a javadoc */``。具体可以参看[Oracle的文档](http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html) </p>
+<p id="comment1">[1]实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/ ** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
