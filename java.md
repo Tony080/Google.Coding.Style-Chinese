@@ -112,11 +112,14 @@
 导入顺序遵循以下原则：
 1. 所有静态导入在同一区块<br>
 2. 所有非静态导入在同一区块<br>
+
 如果静态导入和非静态导入同时出现，使用一个空行分割两个区块。其他导包声明之间无空格。<br>
 每个区块的导包语句按照名字的ASCII顺序排序。(**注意**：这并不意味着整个导包语句都按照ASCII顺序排序，因为(在ASCII表中)'.'出现在';'前)<br>
 #### 3.3.4 禁止静态导入类
 静态导入不可用于静态嵌套类。静态嵌套类由普通导入语句导入。
 ### 3.4 类声明
+#### 3.4.1 有且仅有一个顶层类声明
+每个顶层类都处在(以他类命名的)源文件顶层。<br>
 
 ### 译注
 <p id="comment1">[1]实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
