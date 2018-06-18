@@ -120,6 +120,9 @@
 ### 3.4 类声明
 #### 3.4.1 有且仅有一个顶层类声明
 每个顶层类都处在(以他类命名的)源文件顶层。<br>
-
+#### 3.4.2 类内容的顺序
+如何排列你的成员变量与初始化函数是一件很容易学习的事情。但是，排列的方法不止一种；不同的类有不同的内容排序方法。<br>
+重要的是，每个类都应使用**某种逻辑排序**，这样代码维护者在被(审阅代码时)问到的话就可以有充足的理由解释清楚。例如，新的方法不仅仅处于习惯性的放在类的末尾，放在末尾意味着此种顺序产生了“按日期添加”的非逻辑排序。
+##### 3.4.2.1 
 ### 译注
 <p id="comment1">[1]实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
