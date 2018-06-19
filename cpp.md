@@ -5,7 +5,7 @@
 # 目录
 [背景](#1-背景)<br>
 1. [头文件](#1-头文件)<br>
-1.1 [Self-contained 头文件](#11)<br>
-1.2 [``#define`` 保护](#12)<br>
+1.1 [Self-contained 头文件](#1.1)<br>
+1.2 [``#define`` 保护](#1.2)<br>
 1.3 [前置声明(Forward Declarations)](#13)<br>
 1.4 [内联函数(inline function)](#14)<br>
