@@ -127,6 +127,6 @@
 ##### 3.4.2.1 重载：不要分割开
 当一个类有多个构造函数，或多个方法重名时，他们应该一个接一个的挨个卸下来，中间不能有任何其他代码(private方法也不行)。
 # 4. 格式
-**文档术语**：
+**文档术语**：*块状结构*指类的主体，方法或构造函数。注意，在4.8.3.1节数组初始化声明(array initializers)中，数组初始化声明可以被选择性的视为块状结构。
 ### 译注
 <p id="comment1"><a href="#11-文档术语">[1]</a>实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
