@@ -127,6 +127,39 @@
 ##### 3.4.2.1 重载：不要分割开
 当一个类有多个构造函数，或多个方法重名时，他们应该一个接一个的挨个卸下来，中间不能有任何其他代码(private方法也不行)。
 # 4. 格式
-**文档术语**：*块状结构*指类的主体，方法或构造函数。注意，在4.8.3.1节数组初始化声明(array initializers)中，数组初始化声明可以被选择性的视为块状结构。
+**文档术语**：*块状结构*(block-like constructs)指类的主体，方法或构造函数。注意，在4.8.3.1节数组初始化声明(array initializers)中，数组初始化声明可以被选择性的视为块状结构。
+## 4.1 大括号
+### 4.1.1 可用可不用的时候必用大括号
+在``if``, ``else``, ``for``, ``do``和``while``语句中，即便无内部语句或只有一句，也必须使用大括号。
+### 4.1.2 非空语句块：使用K&R风格
+对于*非空*语句块和块状结构，使用Kernighan and Ritchie风格([埃及括号(Egyptian brackets)](http://www.codinghorror.com/blog/2012/07/new-programming-jargon.html))的大括号：
+- 左大括号前不换行。
+- 左大括号后换行。
+- 右大括号前换行。
+- 仅当结束一段声明、函数、构造函数、非匿名类时，右大括号后才换行。比如，当右大括号后有``else``或逗号时，在右大括号后就不换行。
+例子：
+```java
+return () -> {
+  while (condition()) {
+    method();
+  }
+};
+
+return new MyClass() {
+  @Override public void method() {
+    if (condition()) {
+      try {
+        something();
+      } catch (ProblemException e) {
+        recover();
+      }
+    } else if (otherCondition()) {
+      somethingElse();
+    } else {
+      lastThing();
+    }
+  }
+};
+```
 ### 译注
 <p id="comment1"><a href="#11-文档术语">[1]</a>实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
