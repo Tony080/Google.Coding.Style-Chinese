@@ -127,7 +127,7 @@
 ##### 3.4.2.1 重载：不要分割开
 当一个类有多个构造函数，或多个方法重名时，他们应该一个接一个的挨个卸下来，中间不能有任何其他代码(private方法也不行)。
 # 4. 格式
-**文档术语**：*块状结构*(block-like constructs)指类的主体，方法或构造函数。注意，在4.8.3.1节数组初始化声明(array initializers)中，数组初始化声明可以被选择性的视为块状结构。
+**文档术语**：*块状结构*(block-like constructs)指类的主体，方法或构造函数。注意，在4.8.3.1节 数组初始化声明(array initializers)中，数组初始化声明可以被选择性的视为块状结构。
 ## 4.1 大括号
 ### 4.1.1 可用可不用的时候必用大括号
 在``if``, ``else``, ``for``, ``do``和``while``语句中，即便无内部语句或只有一句，也必须使用大括号。
@@ -136,7 +136,7 @@
 - 左大括号前不换行。
 - 左大括号后换行。
 - 右大括号前换行。
-- 仅当结束一段声明、函数、构造函数、非匿名类时，右大括号后才换行。比如，当右大括号后有``else``或逗号时，在右大括号后就不换行。
+- 仅当结束一段声明、函数、构造函数、非匿名类时，右大括号后才换行。比如，当右大括号后有``else``或逗号时，右大括号后就不换行。<br>
 例子：
 ```java
 return () -> {
@@ -160,6 +160,24 @@ return new MyClass() {
     }
   }
 };
+```
+枚举类有几个例外，详情参见4.8.1节 枚举类
+### 4.1.3 空语句块：有可能被简化
+空语句块或块状结构可以使用K&R风格(在4.1.2节中)、除此之外，**除非**该空语句块是多段语句块的一部分(如``if/else``或``try/catch/finally``)，空语句块的左右大括号也可以不加字符，不加换行的紧挨在一起(``{}``)。<br>
+例子：
+```java
+  // 可以接受
+  void doNothing() {}
+
+  // 同样可以接受
+  void doNothingElse() {
+  }
+```
+```java
+  // 不可接受：多段语句块中不允许存在简化过的空语句块
+  try {
+    doSomething();
+  } catch (Exception e) {}
 ```
 ### 译注
 <p id="comment1"><a href="#11-文档术语">[1]</a>实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
