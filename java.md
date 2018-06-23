@@ -181,7 +181,12 @@ return new MyClass() {
     doSomething();
   } catch (Exception e) {}
 ```
-## 区块锁紧：+2空格
+## 4.2 区块缩进：+2空格
+每当新增一个新的区块或块状结构时，缩进+2空格。当该区块结束后，缩进回到之前的缩进水平(即-2空格)。缩进区域对于所处区块的所有代码和注释都均适用。(见4.1.2节 [非空语句块：使用K&R风格](#412-非空语句块使用kr风格))
+## 4.3 每行仅一条语句
+每个语句结束后都应换行。
+## 4.4 每行限制：100
+
 
 ### 译注
 <p id="comment1"><a href="#11-文档术语">[1]</a>实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
