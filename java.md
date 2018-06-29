@@ -208,6 +208,8 @@ Java源码每行限制100个字符。“字符”是指任何一个Unicode码位
 ***注意**：尽管一般情况下换行是为了防止超出每行的字符限制，但有时候尽管并未超出此限制，作者也会处于谨慎将代码分割成多行。*<br>
 ***Tip**：(将原本的代码块)提炼成一个方法或一个局部变量可免除换行的苦恼。*<br>
 ### 4.5.1 在何处换行
-
+换行的一个主旨是：倾向于在更高的语法层上断句。并且：<br>
+1.
+2.
 ### 译注
 <p id="comment1"><a href="#11-文档术语">[1]</a>实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
