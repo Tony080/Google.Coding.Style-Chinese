@@ -215,6 +215,8 @@ Java源码每行限制100个字符。“字符”是指任何一个Unicode码位
 	- 双冒号代表的方法引用(``::``)<br>
 	- 类型绑定中的与(``&``)符号(``<T extends Foo & Bar>``)<br>
 	- ``catch``区块中的或(``|``)符号(``catch (FooException | BarException e)``)<br>
-2.
+2. 当换行出现在*赋值符号*处时，通常在该符号*后*换行，但(在前或者在后换行)都可以接受。<br>
+- 此条也适用于``for``(foreach)语句中的“似赋值符号”冒号(``:``)。<br>
+3. 一个方法或构造函数的名字总是与其左小括号(``(``)连在一起。<br>
 ### 译注
 <p id="comment1"><a href="#11-文档术语">[1]</a>实现用注释是指：如<code>/* A comment */</code>或<code>// Another comment</code>。而文档用注释/Javadoc则是指<code>/** This is a javadoc */</code>。具体可以参看<a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconventions-141999.html">Oracle的文档</a></p>
