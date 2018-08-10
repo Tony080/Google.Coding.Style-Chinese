@@ -7,8 +7,8 @@
 1. [头文件](#1-头文件)<br>
 1.1 [Self-contained 头文件](#11-self-contained-头文件)<br>
 1.2 [``#define`` 保护](#12-define保护)<br>
-1.3 [前置声明(Forward Declarations)](#13)<br>
-1.4 [内联函数(inline function)](#14)<br>
+1.3 [前置声明(Forward Declarations)](#13-前置声明)<br>
+1.4 [内联函数(inline function)](#14-内联函数)<br>
 1.5 [路径及顺序(names and order of includes)](#15)<br>
 ## 背景
 C++是许多Google开源项目所使用的主要开发语言之一。就像是每一个c++编程者知道的，c++有许多很强大的特性。这种力量随之而来的是它的复杂度，会让代码更易产生bug而且不易阅读和维护。
@@ -30,5 +30,6 @@ Google大部分的开源项目都符合本篇指南的要求。
 所有文件都应该有``#define``保护，从而防止头文件被多重引用。
 ### 1.3 前置声明
 ### 1.4 内联函数
+### 1.5 路径及顺序
 
 
